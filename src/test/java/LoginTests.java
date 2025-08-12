@@ -47,4 +47,17 @@ public class LoginTests {
 
     }
 
+    @Test
+    void nemailLoginTest() {
+        open("https://login.qa.studio/");
+
+        $(byText("Забыли пароль?")).click();
+        $("#mailForgot").setValue("testexample.com");
+        $(byText("Отправить код")).click();
+
+        $("[class=message").shouldHave(text("Нужно исправить проблему валидации"));
+
+
+    }
+
 }
