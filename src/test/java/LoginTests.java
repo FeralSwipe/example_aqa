@@ -48,7 +48,7 @@ public class LoginTests {
     }
 
     @Test
-    void notemailLoginTest() {
+    void noemailLoginTest() {
         open("https://login.qa.studio/");
 
         $(byText("Забыли пароль?")).click();
